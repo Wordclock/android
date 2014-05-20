@@ -1,0 +1,3 @@
+[submodule "libs/BluetoothDevicePicker"]
+	path = libs/BluetoothDevicePicker
+	url = git@github.com:johnpatcher/BluetoothDevicePicker.git
