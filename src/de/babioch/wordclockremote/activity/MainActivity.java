@@ -2,10 +2,13 @@ package de.babioch.wordclockremote.activity;
 
 import java.util.Locale;
 
+import de.babioch.bluetoothdevicepicker.dialog.BluetoothDevicePickerDialog;
+import de.babioch.bluetoothdevicepicker.dialog.BluetoothDevicePickerDialog.BluetoothDevicePickedListener;
 import de.babioch.wordclockremote.R;
 import de.babioch.wordclockremote.fragment.AdvancedFragment;
 import de.babioch.wordclockremote.fragment.MainFragment;
 import de.babioch.wordclockremote.fragment.TerminalFragment;
+import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -19,7 +22,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends ActionBarActivity implements ActionBar.TabListener {
+public class MainActivity extends ActionBarActivity implements ActionBar.TabListener, BluetoothDevicePickedListener {
 
     SectionsPagerAdapter mSectionsPagerAdapter;
     ViewPager mViewPager;
@@ -83,6 +86,11 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         } else if (id == R.id.action_settings) {
 
             startActivity(new Intent(this, SettingsActivity.class));
+
+        } else if (id == R.id.action_connect) {
+
+            BluetoothDevicePickerDialog dialog = new BluetoothDevicePickerDialog();
+            dialog.show(getSupportFragmentManager(), null);
 
         } else {
 
@@ -159,6 +167,14 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
     @Override
     public void onTabUnselected(Tab tab, FragmentTransaction transaction)
     {
+
+    }
+
+    @Override
+    public void bluetoothDevicePicked(BluetoothDevice device)
+    {
+
+        // TODO
 
     }
 
