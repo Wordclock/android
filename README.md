@@ -40,6 +40,6 @@ Bitcoin: `1Dn6MEKgRAgdRS8Aeg88fug9XmdgTRpCDA`
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-[0]: https://raw.githubusercontent.com/Wordclock/remote/master/ic_launcher-web.png "Wordclock Remote"
+[0]: https://raw.githubusercontent.com/Wordclock/android/master/ic_launcher-web.png "Wordclock Remote"
 [1]: https://github.com/Wordclock/firmware
 
